@@ -1,19 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
     <title>Back End Assessment</title>
   </head>
   <body class="container">
+    <header><h1>Welcome to my Button Palace!</h1></header>
+    <main id="button-container">
     <button id="complimentButton">Get a Compliment</button>
     <button id="fortuneButton">Get your Fortune</button>
     <button id="suggestionButton">Get a Suggestion</button>
+  </main>
+  <content id='form-container'>
     <form action="submit">
-      <h3>Add a Suggestion for Others!</h3>
-      <input type="text" placeholder="ex: Go on a walk, do 10 squats" />
+      <section id="input-title"><h3>Add a Suggestion for Others!</h3></section>
+      <input type="text" placeholder="ex: Go on a walk, do 10 squats" id="suggest-input"/>
       <button id="submitButton">Add the Suggestion</button>
     </form>
-
+  </content>
+  <content id="dropdown-select-container">
+    <h3>What do you struggle with?</h3>
+    <select name="" id="dropdown" onchange='selectDisplay()'>
+      <option value="">Please choose an option</option>
+      <option value="1">Organizing Information</option>
+      <option value="2">Remembering Events</option>
+      <option value="3">Waking up Early</option>
+    </select>
+  </content>
+  
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="../server/index.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>
